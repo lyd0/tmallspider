@@ -48,6 +48,7 @@ public class HttpUtils {
                 long t = System.currentTimeMillis();
                 doc = Jsoup.connect(url)
                         .cookies(map)
+                        .header("referer","https://detail.tmall.com/item.htm?id=531672637569&sku_properties=5919063:10010&spuId=572300838&sellerId=2134802284&order=3&currentPage=1&append=0&content=1&ua=098")
                         .userAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36").get();
                 System.out.println(System.currentTimeMillis()-t);
                 return doc;
